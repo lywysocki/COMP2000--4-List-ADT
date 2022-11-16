@@ -1,5 +1,4 @@
 /* @formatter:off
-* random test
  *
  * Dave Rosenberg
  * Comp 2000 - Data Structures
