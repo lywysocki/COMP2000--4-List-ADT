@@ -156,7 +156,7 @@ public class Card implements Comparable<Card>
 
         return wasFaceUp ;
 
-        }  // end hide()
+        }  // end hide()pppppppppppppp
 
 
     /**
