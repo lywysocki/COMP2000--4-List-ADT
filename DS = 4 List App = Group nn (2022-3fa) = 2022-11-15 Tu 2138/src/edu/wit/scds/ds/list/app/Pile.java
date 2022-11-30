@@ -24,6 +24,7 @@
 
 package edu.wit.scds.ds.list.app ;
 
+import java.util.ArrayList;
 import java.util.List ;
 
 /**
@@ -31,7 +32,7 @@ import java.util.List ;
  * <p>
  * the bottom card is at position 0
  *
- * @author Your Name
+ * @author Noah Gagnon
  *
  * @version 1.0.0 2022-11-15 Initial implementation
  */
@@ -41,9 +42,13 @@ public class Pile
     // data fields
     /** the list of cards - directly accessible by subclasses */
     protected List<Card> cards ;    // instantiate an ArrayList or LinkedList in the constructor
+    
+    public Pile() {
+    	cards = new ArrayList<Card>(52);
+    }
 
 
-    // TODO implement this
+    // DONE
 
 
     /*
