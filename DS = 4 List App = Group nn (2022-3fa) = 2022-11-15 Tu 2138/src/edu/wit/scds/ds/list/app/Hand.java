@@ -35,22 +35,28 @@ public class Hand extends Pile
     {
     // TODO implement this
 
+    /**
+     * 
+     */
     public Hand()
         {
-        super( 5 ) ;
-
         }
 
 
+    /**
+     * 
+     * 
+     * @return
+     */
     public int getValue()
         {
         int value = 0 ;
 
-        for ( int i = 0 ; i < cards.size() ; i++ )
+        for ( int i = 0 ; i < this.cards.size() ; i++ )
             {
-            if ( cards.get( i ).isFlipped() )
+            if ( this.cards.get( i ).isFlipped() )
                 {
-                if ( cards.get( i ).getValue() == 0 )
+                if ( this.cards.get( i ).getValue() == 0 )
                     {
                     int one = value += 1 ;
                     int eleven = value += 11 ;
@@ -69,7 +75,7 @@ public class Hand extends Pile
                 }
             else
                 {
-                value += cards.get( i ).getValue() ;
+                value += this.cards.get( i ).getValue() ;
 
                 }
 
@@ -80,13 +86,14 @@ public class Hand extends Pile
         }
 
 
+    @Override
     public String toString()
         {
         String s = "" ;
 
-        for ( int i = 0 ; i < cards.size() ; i++ )
+        for ( int i = 0 ; i < this.cards.size() ; i++ )
             {
-            s += String.format( "%s ", cards.get( i ) ) ;
+            s += String.format( "%s ", this.cards.get( i ) ) ;
 
             }
 
