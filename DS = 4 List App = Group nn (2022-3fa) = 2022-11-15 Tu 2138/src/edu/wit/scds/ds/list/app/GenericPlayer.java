@@ -50,7 +50,7 @@ public abstract class GenericPlayer extends Hand
     public void busted()
         {
         this.isBusted = true ;
-        System.out.printf( "%s: Busted!%n", name ) ;
+        System.out.printf( "%s: Busted!%n", this.name ) ;
 
         }
 
@@ -59,7 +59,7 @@ public abstract class GenericPlayer extends Hand
     public String toString()
         {
         String s ;
-        s = String.format( "%s: %s", name, super.toString() ) ;
+        s = String.format( "%s: %s", this.name, super.toString() ) ;
         return s ;
 
         }

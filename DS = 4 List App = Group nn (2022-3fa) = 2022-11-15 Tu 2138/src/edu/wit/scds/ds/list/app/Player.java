@@ -24,16 +24,85 @@
 
 package edu.wit.scds.ds.list.app ;
 
+import java.util.Scanner ;
+
 /**
  * Representation of a player
  *
- * @author Your Name
+ * @author Laura Wysocki
  *
  * @version 1.0.0 2022-11-15 Initial implementation
  */
-public class Player
+public class Player extends GenericPlayer
     {
     // TODO implement this
+
+    /**
+     * @param name
+     */
+    public Player( String name )
+        {
+        super( name ) ;
+        // TODO Auto-generated constructor stub
+
+        }
+
+
+    public void win()
+        {
+        System.out.printf( "%s: Wins!%n", name ) ;
+
+        }
+
+
+    public void lose()
+        {
+        System.out.printf( "%s: Lost%n", name ) ;
+
+        }
+
+
+    public void push()
+        {
+        System.out.printf( "%s: Pushed%n", name ) ;
+
+        }
+
+
+    @Override
+    public boolean isHitting( Scanner s )
+        {
+        // TODO Auto-generated method stub
+        do
+            {
+            System.out.printf( "%s: Do you want to hit (y/n)? ", name ) ;
+            String response = s.next() ; // stops a white space
+            if ( response.length() == 0 )
+                {
+                continue ;
+
+                }
+
+            if ( response.charAt( 0 ) == 'y' )
+                {
+                return true ;
+
+                }
+            else if ( response.charAt( 0 ) == 'n' )
+                {
+                return false ;
+
+                }
+            else
+                {
+                System.out.printf( "Please respond with y or n.%n" ) ;
+
+                }
+
+            }
+        while ( true ) ;
+
+        }
 
 
     /**
@@ -46,6 +115,6 @@ public class Player
         {
         // OPTIONAL for testing and debugging
 
-        }	// end main()
+        }   // end main()
 
     }	// end class Player
