@@ -44,7 +44,7 @@ public class Deck extends Pile
 
     public Deck()
         {
-        super( 52 ) ;
+        super() ;
         populateDeck() ;
 
         }
@@ -81,17 +81,29 @@ public class Deck extends Pile
      */
     private void populateDeck()
         {
-        String[] suit = { "d", "c", "s", "h" } ;
-        String[] face = { "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" } ;
-        int[] value = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10 } ;
-
-        // pick a suit - s
-        for ( int s = 0 ; s < suit.length ; s++ )
+        Suit[] suits = Suit.values();
+        Rank[] ranks = Rank.values();
+        for ( final Suit suit : suits )
             {
-            for ( int f = 0 ; f < face.length ; f++ )
+
+            // skip placeholder suit
+            if ( Suit.NONE.equals( suit ) )
                 {
-                String cardName = face[ f ] + suit[ s ] ;
-                this.cards.add( new Card( cardName, value[ f ] ) ) ;
+                continue ;
+                }
+
+            for ( final Rank rank : ranks )
+                {
+
+                // skip non-playing card(s) - Joker
+                if ( Rank.JOKER.equals( rank ) )
+                    {
+                    continue ;
+                    }
+
+                // build a card
+                final Card newCard = new Card( suit, rank ) ;
+                this.cards.add( newCard ) ;
 
                 // public Card( final Suit theSuit, final Rank theRank )
                 }
@@ -110,6 +122,8 @@ public class Deck extends Pile
     public static void main( String[] args )
         {
         // OPTIONAL for testing and debugging
+        Deck testDeck = new Deck();
+        System.out.println(testDeck.toString());
 
         }	// end main()
 
