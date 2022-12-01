@@ -1,6 +1,8 @@
 
 package edu.wit.scds.ds.list.app ;
 
+import java.util.Scanner ;
+
 /**
  * @author Laura Wysocki
  * 
@@ -22,7 +24,7 @@ public abstract class GenericPlayer extends Hand
         {
         super() ; // we don't need to put it b/c hand already has it
         this.name = name ;
-        isBusted = false ;
+        this.isBusted = false ;
 
         }
 
@@ -35,7 +37,7 @@ public abstract class GenericPlayer extends Hand
      */
     public boolean isBusted()
         {
-        return isBusted ;
+        return this.isBusted ;
 
         }
 
@@ -47,7 +49,7 @@ public abstract class GenericPlayer extends Hand
      */
     public void busted()
         {
-        isBusted = true ;
+        this.isBusted = true ;
         System.out.printf( "%s: Busted!%n", name ) ;
 
         }
