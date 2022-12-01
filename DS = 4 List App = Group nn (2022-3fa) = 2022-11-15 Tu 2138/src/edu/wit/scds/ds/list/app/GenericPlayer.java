@@ -11,6 +11,7 @@ import java.util.Scanner ;
 public abstract class GenericPlayer extends Hand
     {
 
+
     /**
      * 
      */
@@ -33,7 +34,7 @@ public abstract class GenericPlayer extends Hand
     /**
      * 
      * 
-     * @return
+     * @return true if player is busted, false if otherwise
      */
     public boolean isBusted()
         {
@@ -44,7 +45,7 @@ public abstract class GenericPlayer extends Hand
 
     // setter of isBusted
     /**
-     * 
+     * setter 
      * 
      */
     public void busted()

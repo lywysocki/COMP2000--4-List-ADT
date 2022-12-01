@@ -48,6 +48,10 @@ public class Player extends GenericPlayer
         }
 
 
+    /**
+     * 
+     * 
+     */
     public void win()
         {
         System.out.printf( "%s: Wins!%n", name ) ;
@@ -55,6 +59,10 @@ public class Player extends GenericPlayer
         }
 
 
+    /**
+     * 
+     * 
+     */
     public void lose()
         {
         System.out.printf( "%s: Lost%n", name ) ;
@@ -62,6 +70,10 @@ public class Player extends GenericPlayer
         }
 
 
+    /**
+     * 
+     * 
+     */
     public void push()
         {
         System.out.printf( "%s: Pushed%n", name ) ;
