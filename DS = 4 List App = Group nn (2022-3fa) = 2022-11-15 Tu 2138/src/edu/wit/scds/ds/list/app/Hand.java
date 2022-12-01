@@ -27,7 +27,7 @@ package edu.wit.scds.ds.list.app ;
 /**
  * Representation of a hand of cards
  *
- * @author Your Name
+ * @author Laura Wysocki
  *
  * @version 1.0.0 2022-11-15 Initial implementation
  */
