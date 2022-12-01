@@ -35,6 +35,67 @@ public class Hand extends Pile
     {
     // TODO implement this
 
+    public Hand()
+        {
+        super( 5 ) ;
+
+        }
+
+
+    public int getValue()
+        {
+        int value = 0 ;
+
+        for ( int i = 0 ; i < cards.size() ; i++ )
+            {
+            if ( cards.get( i ).isFlipped() )
+                {
+                if ( cards.get( i ).getValue() == 0 )
+                    {
+                    int one = value += 1 ;
+                    int eleven = value += 11 ;
+
+                    if ( one < eleven && eleven < 21 )
+                        {
+                        value = eleven ;
+                        break ;
+
+                        }
+
+                    }
+
+                continue ; // moves to next iteration of the loop
+
+                }
+            else
+                {
+                value += cards.get( i ).getValue() ;
+
+                }
+
+            }
+
+        return value ;
+
+        }
+
+
+    public String toString()
+        {
+        String s = "" ;
+
+        for ( int i = 0 ; i < cards.size() ; i++ )
+            {
+            s += String.format( "%s ", cards.get( i ) ) ;
+
+            }
+
+        s += String.format( "Showing: %d", getValue() ) ;
+
+        return s ;
+
+        }
+
 
     /**
      * (optional) test driver
