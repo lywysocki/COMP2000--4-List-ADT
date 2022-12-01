@@ -24,7 +24,7 @@
 
 package edu.wit.scds.ds.list.app ;
 
-import java.util.ArrayList;
+import java.util.ArrayList ;
 import java.util.List ;
 
 /**
@@ -37,18 +37,47 @@ import java.util.List ;
  * @version 1.0.0 2022-11-15 Initial implementation
  */
 public class Pile
+// DONE
     {
 
     // data fields
     /** the list of cards - directly accessible by subclasses */
-    protected List<Card> cards ;    // instantiate an ArrayList or LinkedList in the constructor
-    
-    public Pile() {
-    	cards = new ArrayList<Card>(52);
-    }
+    protected List<Card> cards ;    // instantiate an ArrayList or LinkedList in the
+                                    // constructor
+
+    /**
+     * 
+     */
+    public Pile()
+        {
+        this.cards = new ArrayList<Card>( 52 ) ;
+
+        }
 
 
-    // DONE
+    /**
+     * 
+     * 
+     * @param c
+     */
+    public void addCard( Card c )
+        {
+        this.cards.add( c ) ;
+
+        }
+
+
+    /**
+     * 
+     * 
+     * @param c
+     */
+    public void removeCard( Card c )
+        {
+        this.cards.remove( c ) ;
+
+        }
+
 
 
     /*
