@@ -13,9 +13,12 @@ public abstract class GenericPlayer extends Hand
 
 
     /**
-     * 
+     * only to be accessed by Player and House
      */
     protected String name ;
+    /**
+     * only to be accessed by Player and House
+     */
     protected boolean isBusted ;
 
     /**

@@ -54,7 +54,7 @@ public class Player extends GenericPlayer
      */
     public void win()
         {
-        System.out.printf( "%s: Wins!%n", name ) ;
+        System.out.printf( "%s: Wins!%n", this.name ) ;
 
         }
 
@@ -65,7 +65,7 @@ public class Player extends GenericPlayer
      */
     public void lose()
         {
-        System.out.printf( "%s: Lost%n", name ) ;
+        System.out.printf( "%s: Lost%n", this.name ) ;
 
         }
 
@@ -76,7 +76,7 @@ public class Player extends GenericPlayer
      */
     public void push()
         {
-        System.out.printf( "%s: Pushed%n", name ) ;
+        System.out.printf( "%s: Pushed%n", this.name ) ;
 
         }
 
@@ -87,7 +87,7 @@ public class Player extends GenericPlayer
         // TODO Auto-generated method stub
         do
             {
-            System.out.printf( "%s: Do you want to hit (y/n)? ", name ) ;
+            System.out.printf( "%s: Do you want to hit (y/n)? ", this.name ) ;
             String response = s.next() ; // stops a white space
             if ( response.length() == 0 )
                 {

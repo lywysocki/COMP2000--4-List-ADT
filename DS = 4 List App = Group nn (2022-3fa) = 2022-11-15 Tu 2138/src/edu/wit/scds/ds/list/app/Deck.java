@@ -29,7 +29,7 @@ import java.util.Random ;
 /**
  * Representation of a deck of cards
  *
- * @author Your Name
+ * @author Noah Gagnon
  *
  * @version 1.0.0 2022-11-15 Initial implementation
  */
