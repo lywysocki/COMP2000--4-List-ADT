@@ -13,7 +13,7 @@ public class Blackjack
     {
 
     /**
-     * @param args
+     * @param args an array of command-line arguments for the application
      */
     public static void main( String[] args )
         {
