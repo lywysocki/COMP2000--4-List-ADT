@@ -49,6 +49,7 @@ public class Deck extends Pile
         {
         super() ;
         populateDeck() ;
+        
 
         }
 
@@ -107,7 +108,7 @@ public class Deck extends Pile
                     }
 
                 // build a card
-                final Card newCard = new Card( suit, rank ) ;
+                final Card newCard = new Card( suit, rank, true ) ;
                 this.cards.add( newCard ) ;
 
                 // public Card( final Suit theSuit, final Rank theRank )

@@ -53,7 +53,7 @@ public class Blackjack
             if ( p instanceof House )
                 { // Polymorphism
                 House house = (House) p ; // casting p to a house
-                house.flipFirstCard() ;
+                house.flipFirstCardDown() ;
 
                 }
 
@@ -68,7 +68,7 @@ public class Blackjack
             if ( p instanceof House )
                 {
                 House house = (House) p ;
-                house.flipFirstCard() ;
+                house.flipFirstCardDown() ;
 
                 }
 
@@ -82,6 +82,7 @@ public class Blackjack
                     }
                 else
                     {
+                
                     break ; // kick us out of the while
 
                     }
@@ -97,8 +98,10 @@ public class Blackjack
             }
 
 // display the final hands
+        
         System.out.printf( "%nFinal Hands%n%n" ) ;
 // for/each loop
+        h.flipFirstCardUp();
         for ( GenericPlayer p : players )
             {
             System.out.printf( "%s%n", p ) ;

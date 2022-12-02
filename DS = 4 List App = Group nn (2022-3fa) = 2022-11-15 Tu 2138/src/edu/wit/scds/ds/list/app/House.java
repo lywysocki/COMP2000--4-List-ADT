@@ -25,7 +25,7 @@ public class House extends GenericPlayer
     @Override
     public boolean isHitting( Scanner s )
         {
-        if ( ( getHandValue() <= 16 ) && !this.isBusted )
+        if ( ( getHouseValue() <= 16 ) && !this.isBusted )
             {
             return true ; // are hitting
 
@@ -38,7 +38,7 @@ public class House extends GenericPlayer
     /**
      * Only shows one of House's cards
      */
-    public void flipFirstCard()
+    public void flipFirstCardDown()
         {
         if ( this.cards.size() == 0 )
             {
@@ -47,7 +47,20 @@ public class House extends GenericPlayer
             }
 
         // will crash if cards is empty
-        this.cards.get( 0 ).flip() ;
+        this.cards.get( 0 ).setFaceUp(false) ;
+
+        }
+    
+    public void flipFirstCardUp()
+        {
+        if ( this.cards.size() == 0 )
+            {
+            return ;
+
+            }
+
+        // will crash if cards is empty
+        this.cards.get( 0 ).setFaceUp(true) ;
 
         }
 
