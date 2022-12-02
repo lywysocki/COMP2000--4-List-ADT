@@ -45,7 +45,7 @@ public class Hand extends Pile
     /**
      * @return value of the hand
      */
-    public int getValue()
+    public int getHandValue()
         {
         int value = 0 ;
 
@@ -130,6 +130,7 @@ public class Hand extends Pile
      */
     private boolean isSplittable()
         {
+        
 
         // TODO Auto-generated method stub
         return false ;

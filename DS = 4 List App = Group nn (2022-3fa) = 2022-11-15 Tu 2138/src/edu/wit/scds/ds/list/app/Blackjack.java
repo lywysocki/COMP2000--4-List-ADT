@@ -86,7 +86,7 @@ public class Blackjack
 
                     }
 
-                if ( p.getValue() > 21 )
+                if ( p.getHandValue() > 21 )
                     {
                     p.busted() ;
 
@@ -125,17 +125,17 @@ public class Blackjack
 
                     }
                 // should probably get value of house from arrayList
-                else if ( player.isBusted() || player.getValue() < h.getValue() )
+                else if ( player.isBusted() || player.getHandValue() < h.getHandValue() )
                     {
                     player.lose() ;
 
                     }
-                else if ( !player.isBusted() && player.getValue() == h.getValue() )
+                else if ( !player.isBusted() && player.getHandValue() == h.getHandValue() )
                     {
                     player.push() ;
 
                     }
-                else if ( !player.isBusted() && player.getValue() > h.getValue() )
+                else if ( !player.isBusted() && player.getHandValue() > h.getHandValue() )
                     {
                     player.win() ;
 

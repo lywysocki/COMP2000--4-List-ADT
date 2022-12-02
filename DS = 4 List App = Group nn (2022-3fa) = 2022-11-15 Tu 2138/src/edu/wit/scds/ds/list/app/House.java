@@ -25,7 +25,7 @@ public class House extends GenericPlayer
     @Override
     public boolean isHitting( Scanner s )
         {
-        if ( ( getValue() <= 16 ) && !this.isBusted )
+        if ( ( getHandValue() <= 16 ) && !this.isBusted )
             {
             return true ; // are hitting
 
