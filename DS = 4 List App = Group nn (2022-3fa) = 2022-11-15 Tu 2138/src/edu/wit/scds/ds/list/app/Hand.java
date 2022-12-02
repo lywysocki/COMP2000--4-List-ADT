@@ -43,7 +43,7 @@ public class Hand extends Pile
 
 
     /**
-     * @return
+     * @return value of the hand
      */
     public int getValue()
         {
@@ -51,7 +51,7 @@ public class Hand extends Pile
 
         for ( int i = 0 ; i < this.cards.size() ; i++ )
             {
-            if ( this.cards.get( i ).isFlipped() )
+            if ( this.cards.get( i ).getFaceUp() )
                 {
                 if ( this.cards.get( i ).getValue() == 0 )
                     {
