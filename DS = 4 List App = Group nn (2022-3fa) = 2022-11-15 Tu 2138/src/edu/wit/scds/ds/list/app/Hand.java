@@ -144,6 +144,18 @@ public class Hand extends Pile
         return false ;
 
         }
+    @Override
+    public String toString() {
+        String s ="";
+        
+        for (int i = 0; i < this.cards.size(); i++) {
+            s+=String.format("%s ", this.cards.get(i));
+        }
+        s+=String.format("Showing: %d", getHandValue());
+        
+        return s;
+    }
+
 
 
     /**
