@@ -42,6 +42,9 @@ public class Deck extends Pile
     */
     Random rand = new Random() ;
 
+    /**
+     * 
+     */
     public Deck()
         {
         super() ;
@@ -51,7 +54,7 @@ public class Deck extends Pile
 
 
     /**
-     * @param h
+     * @param h creates player's hand
      */
     public void draw( Hand h )
         {
