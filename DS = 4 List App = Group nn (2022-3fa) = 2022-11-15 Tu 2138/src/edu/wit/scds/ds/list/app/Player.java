@@ -35,56 +35,56 @@ import java.util.Scanner ;
  */
 public class Player extends GenericPlayer
     {
-    // TODO implement this
+    // DONE
 
     /**
+     * Constructs player
+     * 
      * @param playerName name of the player
      */
     public Player( String playerName )
         {
         super( playerName ) ;
-        // TODO Auto-generated constructor stub
 
-        }
+        } // end 1-arg constructor
 
 
     /**
-     *
-     *
+     * prints out 'Wins' if player won
      */
     public void win()
         {
         System.out.printf( "%s: Wins!%n", this.name ) ;
 
-        }
+        } // end win()
 
 
     /**
-     *
+     * prints out 'Lost' if player lost
      *
      */
     public void lose()
         {
         System.out.printf( "%s: Lost%n", this.name ) ;
 
-        }
+        } // end lose()
 
 
     /**
-     *
+     * prints out 'push' if player ties with dealer
      *
      */
     public void push()
         {
         System.out.printf( "%s: Pushed%n", this.name ) ;
 
-        }
+        } // end push()
 
 
     @Override
     public boolean isHitting( Scanner s )
         {
-        // TODO Auto-generated method stub
+
         do
             {
             System.out.printf( "%s: Do you want to hit (y/n)? ", this.name ) ;
@@ -93,28 +93,29 @@ public class Player extends GenericPlayer
                 {
                 continue ;
 
-                }
+                } // end if
 
             if ( response.charAt( 0 ) == 'y' )
                 {
                 return true ;
 
-                }
+                } // end if
             else if ( response.charAt( 0 ) == 'n' )
                 {
                 return false ;
 
-                }
+                } // end else if
             else
                 {
                 System.out.printf( "Please respond with y or n.%n" ) ;
 
-                }
+                } // end else
 
-            }
+            } // end do-while
         while ( true ) ;
 
-        }
+        
+        } // end isHitting()
 
 
     /**

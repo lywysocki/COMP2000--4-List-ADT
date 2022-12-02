@@ -35,26 +35,27 @@ import java.util.Random ;
  */
 public class Deck extends Pile
     {
-    // TODO implement this
+    // DONE
 
     /**
-    *
-    */
+     * creates object of type random
+     */
     Random rand = new Random() ;
 
     /**
-     * 
+     * constructs deck
      */
     public Deck()
         {
         super() ;
         populateDeck() ;
         
-
-        }
+        } // end no-args constructor 
 
 
     /**
+     * method to draw cards
+     * 
      * @param h creates player's hand
      */
     public void draw( Hand h )
@@ -63,25 +64,20 @@ public class Deck extends Pile
         h.addCard( this.cards.get( r ) ) ;
         this.cards.remove( r ) ;
 
-        }
+        } // end draw()
 
-
-    // controlled access to populateDeck() from outside
     /**
-     *
-     *
+     * shuffles deck
      */
     public void shuffle()
         {
         populateDeck() ;
 
-        }
+        } // end shuffle()
 
 
     /**
-     *
-     *
-     *
+     * creates the deck
      */
     private void populateDeck()
         {
@@ -95,7 +91,7 @@ public class Deck extends Pile
                 {
                 continue ;
 
-                }
+                } // end if
 
             for ( final Rank rank : ranks )
                 {
@@ -105,18 +101,18 @@ public class Deck extends Pile
                     {
                     continue ;
 
-                    }
+                    } // end if
 
                 // build a card
                 final Card newCard = new Card( suit, rank, true ) ;
                 this.cards.add( newCard ) ;
 
                 // public Card( final Suit theSuit, final Rank theRank )
-                }
+                } // end for
 
-            }
+            } // end for
 
-        }
+        } // end populateDeck()
 
 
     /**

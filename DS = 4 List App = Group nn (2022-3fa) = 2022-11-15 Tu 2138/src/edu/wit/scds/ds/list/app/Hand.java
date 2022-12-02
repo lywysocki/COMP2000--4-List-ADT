@@ -27,25 +27,27 @@ package edu.wit.scds.ds.list.app ;
 /**
  * Representation of a hand of cards
  *
- * @author Laura Wysocki
+ * @author Noah Gagnon
  *
  * @version 1.0.0 2022-11-15 Initial implementation
  */
 public class Hand extends Pile
     {
-    // TODO implement this
+    // DONE
 
     /**
-     * 
+     * Constructs a hand of 2
      */
     public Hand()
         {
         super( 2 ) ;
 
-        }
+        } // end no-args constructor
 
 
     /**
+     * Getter for the value of the hand
+     * 
      * @return value of the hand
      */
     public int getHandValue()
@@ -94,8 +96,13 @@ public class Hand extends Pile
 
         return value ;
 
-        }
+        } // end getHandValue()
     
+    /**
+     * getter for the value of the house's hand
+     * 
+     * @return value of the house's hand
+     */
     public int getHouseValue()
         {
         int value = 0 ;
@@ -136,11 +143,11 @@ public class Hand extends Pile
 
         return value ;
 
-        }
+        } // end getHouseValue()
 
 
     /**
-     * @return
+     * @return 
      */
     public Hand split()
         {
@@ -159,11 +166,9 @@ public class Hand extends Pile
 
             }
 
-        }
+        } // end split()
 
 
-// test
-// test
     /**
      * @return
      */
@@ -173,7 +178,7 @@ public class Hand extends Pile
         // TODO Auto-generated method stub
         return false ;
 
-        }
+        } // end isSplittable()
 
 
     @Override
@@ -191,7 +196,7 @@ public class Hand extends Pile
 
         return s ;
 
-        }
+        } // end toString()
 
 
     /**

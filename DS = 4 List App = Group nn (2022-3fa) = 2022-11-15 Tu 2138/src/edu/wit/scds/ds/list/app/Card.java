@@ -45,12 +45,13 @@ import java.util.Objects ;
  * @version 2.1.0 2022-11-06 support dynamic switching to compare cards based on suit
  *     and rank or rank alone
  *
- * @author Your Name
+ * @author Tyler Cornell
  *
  * @version 2.2.0 2022-11-15 Modifications for use for our game
  */
 public class Card implements Comparable<Card>
     {
+    // DONE
 
     // utility constants
     /** indicate card is face up */

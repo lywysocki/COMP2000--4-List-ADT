@@ -46,13 +46,13 @@ public class Pile
                                     // constructor
 
     /**
-     *
+     * creates pile of cards
      */
     public Pile()
         {
         this.cards = new ArrayList<>( 52 ) ;
 
-        }
+        } // end no-args constructor
 
 
     /**
@@ -62,10 +62,12 @@ public class Pile
         {
         this.cards = new ArrayList<>( pileSize ) ;
 
-        }
+        } // end 1-arg constructor
 
 
     /**
+     * adds card to pile
+     * 
      * @param c
      *     card to be added
      */
@@ -73,10 +75,12 @@ public class Pile
         {
         this.cards.add( c ) ;
 
-        }
+        } // end addCard()
 
 
     /**
+     * removes card from pile
+     * 
      * @param c
      *     card to be removed
      */
@@ -84,7 +88,7 @@ public class Pile
         {
         this.cards.remove( c ) ;
 
-        }
+        } // end removeCard()
 
 
     /*
