@@ -42,10 +42,8 @@ public abstract class GenericPlayer extends Hand
 
         }
 
-
-    // setter of isBusted
     /**
-     * setter 
+     * setter of isBusted
      * 
      */
     public void busted()
@@ -69,8 +67,8 @@ public abstract class GenericPlayer extends Hand
     /**
      * 
      * 
-     * @param s
-     * @return
+     * @param s reads in from console if player is hitting or not (to be overridden by subclasses)
+     * @return true if player is hitting, false if otherwise
      */
     public abstract boolean isHitting( Scanner s ) ;
 
