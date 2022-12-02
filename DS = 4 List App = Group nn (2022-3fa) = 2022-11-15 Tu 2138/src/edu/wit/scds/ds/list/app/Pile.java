@@ -55,6 +55,9 @@ public class Pile
         }
 
 
+    /**
+     * @param pileSize desired size of the pile
+     */
     public Pile( int pileSize )
         {
         this.cards = new ArrayList<>( pileSize ) ;
