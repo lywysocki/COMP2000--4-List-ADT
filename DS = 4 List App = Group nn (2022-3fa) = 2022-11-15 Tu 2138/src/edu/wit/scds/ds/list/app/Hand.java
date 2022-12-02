@@ -154,15 +154,11 @@ public class Hand extends Pile
             return null ;
 
             }
-        else
-            {
-            Hand split = new Hand() ;      ///
-            split.addCard( this.cards.remove( 1 ) ) ;
-            // value = this.cards.get( 0 ).getValue() ;
-            boolean isSplit = true ;
-            return split ;
-
-            }
+        Hand split = new Hand() ;      ///
+        split.addCard( this.cards.remove( 1 ) ) ;
+        // value = this.cards.get( 0 ).getValue() ;
+        boolean isSplit = true ;
+        return split ;
 
         } // end split()
 
