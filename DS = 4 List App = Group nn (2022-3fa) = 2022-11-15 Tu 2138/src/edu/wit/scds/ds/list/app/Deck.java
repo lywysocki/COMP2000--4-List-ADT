@@ -123,6 +123,12 @@ public class Deck extends Pile
         {
         // OPTIONAL for testing and debugging
         Deck testDeck = new Deck();
+        
+        
+        for ( final Card aCard : testDeck.cards )
+            {
+            aCard.reveal() ;
+            }
         System.out.println(testDeck.toString());
 
         }	// end main()
