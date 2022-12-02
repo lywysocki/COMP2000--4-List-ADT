@@ -26,8 +26,8 @@ public class Blackjack
         Deck d = new Deck() ; // a lot happens here!
 
         System.out.printf( "%nWelcome to Blackjack%n%n" ) ;
-        System.out.printf( "Enter number of human players: " ) ;
-        int numPlayers = input.nextInt() ; // put in try catch later in case someone
+        //System.out.printf( "Enter number of human players: " ) ;
+        int numPlayers = 2 ; // put in try catch later in case someone
                                            // puts in something to crash program
 
         /**
@@ -98,7 +98,7 @@ public class Blackjack
 
                     } // end else
 
-                if ( p.getHandValue() > 21 )
+                if ( p.getHouseValue() > 21 )
                     {
                     p.busted() ;
 
@@ -139,19 +139,20 @@ public class Blackjack
 
                     } // end if
 
-                else if ( player.isBusted() || ( player.getHandValue() < h.getHandValue() ) )
-                    {
-                    player.lose() ;
-
-                    } // end else if
-                else if ( !player.isBusted() && ( player.getHandValue() == h.getHandValue() ) )
+                
+                else if ( !player.isBusted() && ( player.getHouseValue() == h.getHouseValue() ) )
                     {
                     player.push() ;
 
                     } // end else if
-                else if ( !player.isBusted() && ( player.getHandValue() > h.getHandValue() ) )
+                else if ( !player.isBusted() && ( player.getHouseValue() > h.getHouseValue() ) )
                     {
                     player.win() ;
+
+                    } // end else if
+                else if ( player.isBusted() || ( player.getHouseValue() < h.getHouseValue() ) )
+                    {
+                    player.lose() ;
 
                     } // end else if
 
