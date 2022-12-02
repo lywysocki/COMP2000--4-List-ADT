@@ -39,7 +39,9 @@ public class Hand extends Pile
      * 
      */
     public Hand()
-        {}
+        {
+        super(2);        
+        }
 
 
     /**
