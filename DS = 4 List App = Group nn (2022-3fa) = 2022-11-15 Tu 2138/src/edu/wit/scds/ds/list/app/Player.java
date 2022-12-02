@@ -49,8 +49,8 @@ public class Player extends GenericPlayer
 
 
     /**
-     * 
-     * 
+     *
+     *
      */
     public void win()
         {
@@ -60,8 +60,8 @@ public class Player extends GenericPlayer
 
 
     /**
-     * 
-     * 
+     *
+     *
      */
     public void lose()
         {
@@ -71,8 +71,8 @@ public class Player extends GenericPlayer
 
 
     /**
-     * 
-     * 
+     *
+     *
      */
     public void push()
         {

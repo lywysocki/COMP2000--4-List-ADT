@@ -5,7 +5,7 @@ import java.util.Scanner ;
 
 /**
  * @author Laura Wysocki
- * 
+ *
  * @version 1.0.0 2022-12-01 Initial implementation
  */
 public class House extends GenericPlayer
@@ -25,7 +25,7 @@ public class House extends GenericPlayer
     @Override
     public boolean isHitting( Scanner s )
         {
-        if ( getValue() <= 16 && this.isBusted == false )
+        if ( ( getValue() <= 16 ) && !this.isBusted )
             {
             return true ; // we are hitting
 
@@ -40,8 +40,8 @@ public class House extends GenericPlayer
 
 
     /**
-     * 
-     * 
+     *
+     *
      */
     public void flipFirstCard()
         {

@@ -37,8 +37,8 @@ import java.util.List ;
  * @version 1.0.0 2022-11-15 Initial implementation
  */
 public class Pile
-// DONE
     {
+    // DONE
 
     // data fields
     /** the list of cards - directly accessible by subclasses */
@@ -46,18 +46,16 @@ public class Pile
                                     // constructor
 
     /**
-     * 
+     *
      */
     public Pile()
         {
-        this.cards = new ArrayList<Card>( 52 ) ;
+        this.cards = new ArrayList<>( 52 ) ;
 
         }
 
 
     /**
-     * 
-     * 
      * @param c
      */
     public void addCard( Card c )
@@ -68,8 +66,6 @@ public class Pile
 
 
     /**
-     * 
-     * 
      * @param c
      */
     public void removeCard( Card c )
@@ -77,7 +73,6 @@ public class Pile
         this.cards.remove( c ) ;
 
         }
-
 
 
     /*

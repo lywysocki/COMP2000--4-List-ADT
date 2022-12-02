@@ -5,12 +5,11 @@ import java.util.Scanner ;
 
 /**
  * @author Laura Wysocki
- * 
+ *
  * @version 1.0.0 2022-12-01 Initial implementation
  */
 public abstract class GenericPlayer extends Hand
     {
-
 
     /**
      * only to be accessed by Player and House
@@ -35,8 +34,6 @@ public abstract class GenericPlayer extends Hand
 
     // getter for isBusted
     /**
-     * 
-     * 
      * @return true if player is busted, false if otherwise
      */
     public boolean isBusted()
@@ -45,9 +42,9 @@ public abstract class GenericPlayer extends Hand
 
         }
 
+
     /**
      * setter of isBusted
-     * 
      */
     public void busted()
         {
@@ -61,16 +58,16 @@ public abstract class GenericPlayer extends Hand
     public String toString()
         {
         String s ;
-        s = String.format( "%s: %s", this.name, super.toString() ) ;
-        return s ;
+        return String.format( "%s: %s", this.name, super.toString() ) ;
 
         }
 
 
     /**
-     * 
-     * 
-     * @param s reads in from console if player is hitting or not (to be overridden by subclasses)
+     * @param s
+     *     reads in from console if player is hitting or not (to be overridden by
+     *     subclasses)
+     *
      * @return true if player is hitting, false if otherwise
      */
     public abstract boolean isHitting( Scanner s ) ;

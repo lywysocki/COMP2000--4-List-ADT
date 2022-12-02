@@ -42,8 +42,8 @@ import java.util.Objects ;
  *     <li>add support for face up/down
  *     <li>add {@code matches()}
  *     </ul>
- * @version 2.1.0 2022-11-06 support dynamic switching to compare cards based on suit and rank or
- *     rank alone
+ * @version 2.1.0 2022-11-06 support dynamic switching to compare cards based on suit
+ *     and rank or rank alone
  *
  * @author Your Name
  *
@@ -51,6 +51,7 @@ import java.util.Objects ;
  */
 public class Card implements Comparable<Card>
     {
+
     // utility constants
     /** indicate card is face up */
     public final static boolean FACE_UP = true ;
@@ -60,9 +61,15 @@ public class Card implements Comparable<Card>
     // static data
     /** default state of a card when instantiated - face up or down */
     private static boolean defaultFaceUp = FACE_DOWN ;
-    /** controls whether {@code equals()} and {@code compareTo()} consider suit in calculations */
+    /**
+     * controls whether {@code equals()} and {@code compareTo()} consider suit in
+     * calculations
+     */
     private static boolean compareSuit = true ;
-    /** the text to display when the card is face down - if not specified, use current default */
+    /**
+     * the text to display when the card is face down - if not specified, use current
+     * default
+     */
     private static String faceDownText = "--" ;
 
     // data fields
@@ -73,11 +80,9 @@ public class Card implements Comparable<Card>
     /** controls display - face up/down */
     private boolean faceUp ;
 
-
     /*
      * constructors
      */
-
 
     /**
      * initialize a card with no suit (e.g., a joker)
@@ -111,7 +116,8 @@ public class Card implements Comparable<Card>
      * @param theRank
      *     this card's rank
      * @param initiallyFaceUp
-     *     if {@code true}, the card is face up; if {@code false}, the card is face down
+     *     if {@code true}, the card is face up; if {@code false}, the card is face
+     *     down
      */
     public Card( final Suit theSuit, final Rank theRank, final boolean initiallyFaceUp )
         {
@@ -120,7 +126,6 @@ public class Card implements Comparable<Card>
         this.faceUp = initiallyFaceUp ;
 
         }   // end full/3-arg constructor
-
 
     /*
      * methods to affect face up/down state and display of an instance
@@ -179,8 +184,8 @@ public class Card implements Comparable<Card>
      * Retrieve the current behavior of {@code equals()} and {@code compareTo()} wrt
      * {@code this.suit}
      *
-     * @return {@code true} if {@code equals()} and {@code compareTo()} include {@code this.suit};
-     *     {@code false} otherwise
+     * @return {@code true} if {@code equals()} and {@code compareTo()} include
+     *     {@code this.suit}; {@code false} otherwise
      */
     public static boolean getCompareSuit()
         {
@@ -190,12 +195,13 @@ public class Card implements Comparable<Card>
 
 
     /**
-     * Set the current behavior of {@code equals()} and {@code compareTo()} wrt {@code this.suit}
+     * Set the current behavior of {@code equals()} and {@code compareTo()} wrt
+     * {@code this.suit}
      *
      * @param newCompareRankSuit
-     *     the new evaluation behavior wrt {this.suit} where {@code true} causes {@code equals()}
-     *     and {@code compareTo()} to include {@code this.suit} in their evaluations; {@code false}
-     *     won't consider it
+     *     the new evaluation behavior wrt {this.suit} where {@code true} causes
+     *     {@code equals()} and {@code compareTo()} to include {@code this.suit} in
+     *     their evaluations; {@code false} won't consider it
      *
      * @return the previous state (consider/ignore)
      */
@@ -226,8 +232,8 @@ public class Card implements Comparable<Card>
      * Set a card to be face up/down
      *
      * @param newFaceUp
-     *     the new face up/down state, where {@code true} indicates face up, {@code false} is face
-     *     down
+     *     the new face up/down state, where {@code true} indicates face up,
+     *     {@code false} is face down
      *
      * @return the previous state (face up/down)
      */
@@ -245,8 +251,8 @@ public class Card implements Comparable<Card>
     /**
      * Retrieve the text to display when the card is face down
      *
-     * @return the text to display when the card is face down - {@code null} indicates to use the
-     *     default
+     * @return the text to display when the card is face down - {@code null}
+     *     indicates to use the default
      */
     public static String getFaceDownText()
         {
@@ -273,7 +279,6 @@ public class Card implements Comparable<Card>
 
         }  // end setFaceDownText()
 
-
     /*
      * methods related to the defaults
      */
@@ -297,8 +302,8 @@ public class Card implements Comparable<Card>
      * Note that this will only be effective for cards instantiated
      *
      * @param newFaceUp
-     *     the new face up/down state, where {@code true} indicates face up, {@code false} is face
-     *     down
+     *     the new face up/down state, where {@code true} indicates face up,
+     *     {@code false} is face down
      *
      * @return the previous state (face up/down)
      */
@@ -312,15 +317,14 @@ public class Card implements Comparable<Card>
 
         }  // end setDefaultFaceUp()
 
-
     /*
      * utility methods
      */
 
 
     /**
-     * Compares two cards to see if they match, which may be different from them being
-     * {@code equal()}
+     * Compares two cards to see if they match, which may be different from them
+     * being {@code equal()}
      * <p>
      * The {@code Pile} class requires this method.
      *
@@ -335,7 +339,6 @@ public class Card implements Comparable<Card>
         return equals( otherCard ) ;
 
         }  // end matches()
-
 
     /*
      * general methods
@@ -359,6 +362,7 @@ public class Card implements Comparable<Card>
                 {
                 // suits are different - done
                 return suitComparison ;
+
                 }
 
             }
@@ -383,15 +387,17 @@ public class Card implements Comparable<Card>
         if ( this == otherObject )
             {
             return true ;
+
             }
 
         // another Card? false if otherObject is null
         if ( otherObject instanceof final Card otherCard )
             {
             return ( Card.compareSuit
-                        ? this.suit.equals( otherCard.suit )
-                        : true ) &&
-                     ( this.rank.getOrder() == otherCard.rank.getOrder() ) ;
+                ? this.suit.equals( otherCard.suit )
+                    : true ) &&
+                   ( this.rank.getOrder() == otherCard.rank.getOrder() ) ;
+
             }
 
         // no match
@@ -408,8 +414,8 @@ public class Card implements Comparable<Card>
     public int hashCode()
         {
         return Objects.hash( Card.compareSuit
-                                ? this.suit
-                                : 0,    // 2xCk does this work properly?
+            ? this.suit
+                : 0,    // 2xCk does this work properly?
                              this.rank ) ;
 
         }   // end hashCode()
@@ -423,8 +429,8 @@ public class Card implements Comparable<Card>
     public String toString()
         {
         return this.faceUp
-                    ? this.rank.toString() + this.suit.toString()
-                    : Card.faceDownText ;
+            ? this.rank.toString() + this.suit.toString()
+                : Card.faceDownText ;
 
         }	// end toString()
 
@@ -452,6 +458,7 @@ public class Card implements Comparable<Card>
             if ( Suit.NONE.equals( suit ) )
                 {
                 continue ;
+
                 }
 
             for ( final Rank rank : ranks )
@@ -461,6 +468,7 @@ public class Card implements Comparable<Card>
                 if ( Rank.JOKER.equals( rank ) )
                     {
                     continue ;
+
                     }
 
                 // build a card
@@ -469,6 +477,7 @@ public class Card implements Comparable<Card>
 
                 // keep track of it
                 cards.add( newCard ) ;
+
                 }
 
             }
@@ -483,6 +492,7 @@ public class Card implements Comparable<Card>
         for ( final Card aCard : cards )
             {
             aCard.reveal() ;
+
             }
 
         // display all the cards
@@ -518,7 +528,6 @@ public class Card implements Comparable<Card>
         Collections.sort( cards ) ;
         System.out.printf( "%nSorted:%n%s%n%n", cards.toString() ) ;
 
-
         // compare some cards against each other
         Card card1 = cards.get( 15 ) ;
         Card card2 = cards.get( 43 ) ;
@@ -530,7 +539,6 @@ public class Card implements Comparable<Card>
         card2 = cards.get( 20 ) ;
         System.out.printf( "%s.compareTo(%s) = %,d%n", card1, card2, card1.compareTo( card2 ) ) ;
 
-
         System.out.printf( "%n" ) ;
         System.out.printf( "%s.equals(%s) = %b%n", card1, card1, card1.equals( card1 ) ) ;
         System.out.printf( "%s.equals(%s) = %b%n", card1, card2, card1.equals( card2 ) ) ;
@@ -539,7 +547,6 @@ public class Card implements Comparable<Card>
         card1 = new Card( Suit.DIAMONDS, Rank.FOUR ) ;
         card2 = new Card( Suit.HEARTS, Rank.FOUR ) ;
         System.out.printf( "%s.equals(%s) = %b%n", card1, card2, card1.equals( card2 ) ) ;
-
 
         // repeat comparisons without considering suit
         setCompareSuit( false ) ;
@@ -556,7 +563,6 @@ public class Card implements Comparable<Card>
 
         card2 = cards.get( 20 ) ;
         System.out.printf( "%s.compareTo(%s) = %,d%n", card1, card2, card1.compareTo( card2 ) ) ;
-
 
         System.out.printf( "%n" ) ;
         System.out.printf( "%s.equals(%s) = %b%n", card1, card1, card1.equals( card1 ) ) ;

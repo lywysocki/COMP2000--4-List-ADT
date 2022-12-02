@@ -4,17 +4,17 @@
  * Comp 2000 - Data Structures
  * Lab: List application - card game
  * Fall, 2022
- * 
+ *
  * Usage restrictions:
- * 
+ *
  * You may use this code for exploration, experimentation, and furthering your
  * learning for this course. You may not use this code for any other
  * assignments, in my course or elsewhere, without explicit permission, in
  * advance, from myself (and the instructor of any other course).
- * 
+ *
  * Further, you may not post (including in a public repository such as on github)
- * nor otherwise share this code with anyone other than current students in my 
- * sections of this course. Violation of these usage restrictions will be considered 
+ * nor otherwise share this code with anyone other than current students in my
+ * sections of this course. Violation of these usage restrictions will be considered
  * a violation of the Wentworth Institute of Technology Academic Honesty Policy.
  *
  * Do not remove this notice.
@@ -38,7 +38,7 @@ public class Deck extends Pile
     // TODO implement this
 
     /**
-    * 
+    *
     */
     Random rand = new Random() ;
 
@@ -64,8 +64,8 @@ public class Deck extends Pile
 
     // controlled access to populateDeck() from outside
     /**
-     * 
-     * 
+     *
+     *
      */
     public void shuffle()
         {
@@ -75,14 +75,14 @@ public class Deck extends Pile
 
 
     /**
-     * 
-     * 
+     *
+     *
      *
      */
     private void populateDeck()
         {
-        Suit[] suits = Suit.values();
-        Rank[] ranks = Rank.values();
+        Suit[] suits = Suit.values() ;
+        Rank[] ranks = Rank.values() ;
         for ( final Suit suit : suits )
             {
 
@@ -90,6 +90,7 @@ public class Deck extends Pile
             if ( Suit.NONE.equals( suit ) )
                 {
                 continue ;
+
                 }
 
             for ( final Rank rank : ranks )
@@ -99,6 +100,7 @@ public class Deck extends Pile
                 if ( Rank.JOKER.equals( rank ) )
                     {
                     continue ;
+
                     }
 
                 // build a card
@@ -115,21 +117,22 @@ public class Deck extends Pile
 
     /**
      * (optional) test driver
-     * 
+     *
      * @param args
      *     -unused-
      */
     public static void main( String[] args )
         {
         // OPTIONAL for testing and debugging
-        Deck testDeck = new Deck();
-        
-        
+        Deck testDeck = new Deck() ;
+
         for ( final Card aCard : testDeck.cards )
             {
             aCard.reveal() ;
+
             }
-        System.out.println(testDeck.toString());
+
+        System.out.println( testDeck.toString() ) ;
 
         }	// end main()
 
