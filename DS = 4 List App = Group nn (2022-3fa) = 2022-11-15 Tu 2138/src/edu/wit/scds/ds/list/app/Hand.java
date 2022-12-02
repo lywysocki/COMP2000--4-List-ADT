@@ -102,6 +102,29 @@ public class Hand extends Pile
         return s ;
 
         }
+    
+    public Hand split() {
+    if (!isSplittable()) {
+        return null;
+    } else {
+        Hand split = new Hand();      ///
+        split.addCard(cards.remove(1));
+        value = cards.get(0).getValue();
+        isSplit = true;
+        return split;
+    }
+}
+    /**
+     * 
+     * 
+     * @return
+     */
+    private boolean isSplittable()
+        {
+
+        // TODO Auto-generated method stub
+        return false ;
+        }
 
 
     /**
