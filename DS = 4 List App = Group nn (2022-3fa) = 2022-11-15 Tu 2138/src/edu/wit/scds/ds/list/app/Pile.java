@@ -55,8 +55,16 @@ public class Pile
         }
 
 
+    public Pile( int pileSize )
+        {
+        this.cards = new ArrayList<>( pileSize ) ;
+
+        }
+
+
     /**
-     * @param c card to be added
+     * @param c
+     *     card to be added
      */
     public void addCard( Card c )
         {
@@ -66,7 +74,8 @@ public class Pile
 
 
     /**
-     * @param c card to be removed
+     * @param c
+     *     card to be removed
      */
     public void removeCard( Card c )
         {
