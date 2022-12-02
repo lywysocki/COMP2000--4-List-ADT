@@ -87,7 +87,7 @@ public class Blackjack
 
                     }
 
-                if ( p.getHandValue() > 21 )
+                if ( p.getHouseValue() > 21 )
                     {
                     p.busted() ;
 
