@@ -56,7 +56,7 @@ public class Pile
 
 
     /**
-     * @param c
+     * @param c card to be added
      */
     public void addCard( Card c )
         {
@@ -66,7 +66,7 @@ public class Pile
 
 
     /**
-     * @param c
+     * @param c card to be removed
      */
     public void removeCard( Card c )
         {

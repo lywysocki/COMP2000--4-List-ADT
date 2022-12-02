@@ -38,11 +38,11 @@ public class Player extends GenericPlayer
     // TODO implement this
 
     /**
-     * @param name
+     * @param playerName name of the player
      */
-    public Player( String name )
+    public Player( String playerName )
         {
-        super( name ) ;
+        super( playerName ) ;
         // TODO Auto-generated constructor stub
 
         }

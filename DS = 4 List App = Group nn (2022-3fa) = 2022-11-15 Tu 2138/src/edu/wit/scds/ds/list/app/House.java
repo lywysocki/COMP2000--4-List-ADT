@@ -12,12 +12,12 @@ public class House extends GenericPlayer
     {
 
     /**
-     * @param name
+     * 
      */
     public House()
         {
+        // Player name is House
         super( "House" ) ;
-        // TODO Auto-generated constructor stub
 
         }
 
@@ -27,21 +27,16 @@ public class House extends GenericPlayer
         {
         if ( ( getValue() <= 16 ) && !this.isBusted )
             {
-            return true ; // we are hitting
+            return true ; // are hitting
 
             }
-        else
-            {
-            return false ; // we not hitting
-
-            }
+        return false ; // not hitting
 
         }
 
 
     /**
-     *
-     *
+     * Only shows one of House's cards
      */
     public void flipFirstCard()
         {

@@ -21,12 +21,12 @@ public abstract class GenericPlayer extends Hand
     protected boolean isBusted ;
 
     /**
-     * @param name
+     * @param playerName name of player
      */
-    public GenericPlayer( String name )
+    public GenericPlayer( String playerName )
         {
         super() ; // we don't need to put it b/c hand already has it
-        this.name = name ;
+        this.name = playerName ;
         this.isBusted = false ;
 
         }
@@ -58,7 +58,7 @@ public abstract class GenericPlayer extends Hand
     public String toString()
         {
         String s;
-        s = String.format("%s: %s", name, super.toString());
+        s = String.format("%s: %s", this.name, super.toString());
         return s;
         }
 
