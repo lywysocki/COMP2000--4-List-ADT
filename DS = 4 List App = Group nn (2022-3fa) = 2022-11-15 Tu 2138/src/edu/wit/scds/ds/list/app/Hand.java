@@ -40,7 +40,8 @@ public class Hand extends Pile
      */
     public Hand()
         {
-        super(2);        
+        super( 2 ) ;
+
         }
 
 
@@ -55,7 +56,7 @@ public class Hand extends Pile
             {
             if ( this.cards.get( i ).getFaceUp() )
                 {
-                if ( this.cards.get( i ).getValue() == 0 )
+                if ( this.cards.get( i ).rank.toString() == "A" )
                     {
                     int one = value += 1 ;
                     int eleven = value += 11 ;
@@ -74,31 +75,37 @@ public class Hand extends Pile
                 }
             else
                 {
-                value += this.cards.get( i ).getValue() ;
+
+                if ( this.cards.get( i ).rank.toString().matches( "Q|K|J" ) )
+                    {
+                    value += 10 ;
+
+                    }
+                else if ( this.cards.get( i ).rank.toString().matches( "A" ) )
+                    {
+                    if ( value <= 10 )
+                        {
+                        value += 11 ;
+
+                        }
+                    else
+                        {
+                        value += 1 ;
+
+                        }
+
+                    }
+                else
+                    {
+                    value += Integer.parseInt( this.cards.get( i ).rank.toString() ) ;
+
+                    }
 
                 }
 
             }
 
         return value ;
-
-        }
-
-
-    @Override
-    public String toString()
-        {
-        String s = "" ;
-
-        for ( int i = 0 ; i < this.cards.size() ; i++ )
-            {
-            s += String.format( "%s ", this.cards.get( i ) ) ;
-
-            }
-
-        s += String.format( "Showing: %d", getValue() ) ;
-
-        return s ;
 
         }
 
@@ -117,7 +124,7 @@ public class Hand extends Pile
             {
             Hand split = new Hand() ;      ///
             split.addCard( this.cards.remove( 1 ) ) ;
-            value = this.cards.get( 0 ).getValue() ;
+            // value = this.cards.get( 0 ).getValue() ;
             boolean isSplit = true ;
             return split ;
 
@@ -132,7 +139,6 @@ public class Hand extends Pile
      */
     private boolean isSplittable()
         {
-        
 
         // TODO Auto-generated method stub
         return false ;
