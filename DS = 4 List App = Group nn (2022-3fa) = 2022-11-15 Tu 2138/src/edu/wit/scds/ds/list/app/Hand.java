@@ -47,24 +47,22 @@ public class Hand extends Pile
 
     /**
      * Getter for the value of the hand
-     * 
+     *
      * @return value of the hand
      */
     public int getHandValue()
         {
         int value = 0 ;
 
-        for ( int i = 0 ; i < this.cards.size() ; i++ )
+        for ( Card element : this.cards )
             {
 
-            if ( this.cards.get( i ).rank.toString().matches( "Q|K|J" ) &&
-                 ( this.cards.get( i ).getFaceUp() ) )
+            if ( element.rank.toString().matches( "Q|K|J" ) && ( element.getFaceUp() ) )
                 {
                 value += 10 ;
 
                 }
-            else if ( this.cards.get( i ).rank.toString().matches( "A" ) &&
-                      ( this.cards.get( i ).getFaceUp() ) )
+            else if ( element.rank.toString().matches( "A" ) && ( element.getFaceUp() ) )
                 {
                 if ( value <= 10 )
                     {
@@ -82,13 +80,13 @@ public class Hand extends Pile
             else
 
                 {
-                if ( ! ( this.cards.get( i ).getFaceUp() ) )
+                if ( ! ( element.getFaceUp() ) )
                     {
                     continue ;
 
                     }
 
-                value += Integer.parseInt( this.cards.get( i ).rank.toString() ) ;
+                value += Integer.parseInt( element.rank.toString() ) ;
 
                 }
 
@@ -97,25 +95,26 @@ public class Hand extends Pile
         return value ;
 
         } // end getHandValue()
-    
+
+
     /**
      * getter for the value of the house's hand
-     * 
+     *
      * @return value of the house's hand
      */
     public int getHouseValue()
         {
         int value = 0 ;
 
-        for ( int i = 0 ; i < this.cards.size() ; i++ )
+        for ( Card element : this.cards )
             {
 
-            if ( this.cards.get( i ).rank.toString().matches( "Q|K|J" )  )
+            if ( element.rank.toString().matches( "Q|K|J" ) )
                 {
                 value += 10 ;
 
                 }
-            else if ( this.cards.get( i ).rank.toString().matches( "A" ) )
+            else if ( element.rank.toString().matches( "A" ) )
                 {
                 if ( value <= 10 )
                     {
@@ -133,9 +132,8 @@ public class Hand extends Pile
             else
 
                 {
-                
 
-                value += Integer.parseInt( this.cards.get( i ).rank.toString() ) ;
+                value += Integer.parseInt( element.rank.toString() ) ;
 
                 }
 
@@ -147,7 +145,7 @@ public class Hand extends Pile
 
 
     /**
-     * @return 
+     * @return
      */
     public Hand split()
         {
@@ -186,9 +184,9 @@ public class Hand extends Pile
         {
         String s = "" ;
 
-        for ( int i = 0 ; i < this.cards.size() ; i++ )
+        for ( Card element : this.cards )
             {
-            s += String.format( "%s ", this.cards.get( i ) ) ;
+            s += String.format( "%s ", element ) ;
 
             }
 

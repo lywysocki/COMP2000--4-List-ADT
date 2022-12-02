@@ -39,8 +39,9 @@ public class Player extends GenericPlayer
 
     /**
      * Constructs player
-     * 
-     * @param playerName name of the player
+     *
+     * @param playerName
+     *     name of the player
      */
     public Player( String playerName )
         {
@@ -61,7 +62,6 @@ public class Player extends GenericPlayer
 
     /**
      * prints out 'Lost' if player lost
-     *
      */
     public void lose()
         {
@@ -72,7 +72,6 @@ public class Player extends GenericPlayer
 
     /**
      * prints out 'push' if player ties with dealer
-     *
      */
     public void push()
         {
@@ -114,7 +113,6 @@ public class Player extends GenericPlayer
             } // end do-while
         while ( true ) ;
 
-        
         } // end isHitting()
 
 

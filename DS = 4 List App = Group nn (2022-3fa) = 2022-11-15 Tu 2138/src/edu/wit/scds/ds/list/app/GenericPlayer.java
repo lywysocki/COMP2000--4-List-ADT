@@ -5,7 +5,7 @@ import java.util.Scanner ;
 
 /**
  * Abstract class for the creation of players (or the house)
- * 
+ *
  * @author Laura Wysocki
  *
  * @version 1.0.0 2022-12-01 Initial implementation
@@ -25,22 +25,22 @@ public abstract class GenericPlayer extends Hand
 
     /**
      * Creates player with specified name
-     * 
-     * @param playerName name of player
+     *
+     * @param playerName
+     *     name of player
      */
     public GenericPlayer( String playerName )
         {
-        super() ; 
+        super() ;
         this.name = playerName ;
         this.isBusted = false ;
 
         } // end 1-arg constructor
 
 
-
     /**
      * getter for busted
-     * 
+     *
      * @return true if player is busted, false if otherwise
      */
     public boolean isBusted()
@@ -64,15 +64,15 @@ public abstract class GenericPlayer extends Hand
     @Override
     public String toString()
         {
-        String s;
-        s = String.format("%s: %s", this.name, super.toString());
-        return s;
+        String s ;
+        return String.format( "%s: %s", this.name, super.toString() ) ;
+
         } // end toString()
 
 
     /**
      * to be provided by subclass
-     * 
+     *
      * @param s
      *     reads in from console if player is hitting or not (to be overridden by
      *     subclasses)

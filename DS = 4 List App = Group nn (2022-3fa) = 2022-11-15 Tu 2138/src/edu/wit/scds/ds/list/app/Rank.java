@@ -72,9 +72,10 @@ public enum Rank
     ;
 // @formatter:on
 
-
     // static fields
-    /** when true, evaluations will use {@code altPoints} instead of {@code points} */
+    /**
+     * when true, evaluations will use {@code altPoints} instead of {@code points}
+     */
     private static boolean useAltPoints = false ;
     /** when true, evaluations will use {@code altOrder} instead of {@code order} */
     private static boolean useAltOrder = false ;
@@ -93,11 +94,9 @@ public enum Rank
     /** alternate sort order */
     private final int altOrder ;
 
-
     /*
      * constructor
      */
-
 
     /**
      * @param rankDisplayName
@@ -111,7 +110,8 @@ public enum Rank
      * @param rankOrder
      *     numeric order for the card
      * @param rankAltOrder
-     *     alternate order for the card (e.g., Ace can have the lowest or highest order)
+     *     alternate order for the card (e.g., Ace can have the lowest or highest
+     *     order)
      */
     private Rank( final String rankDisplayName,
                   final String rankGraphic,
@@ -128,7 +128,6 @@ public enum Rank
         this.altOrder = rankAltOrder ;
 
         } // end constructor
-
 
     /*
      * getters
@@ -181,8 +180,8 @@ public enum Rank
     public int getOrder()
         {
         return Rank.useAltOrder
-                    ? this.altOrder
-                    : this.order ;
+            ? this.altOrder
+                : this.order ;
 
         } // end getOrder()
 
@@ -193,11 +192,10 @@ public enum Rank
     public int getPoints()
         {
         return Rank.useAltPoints
-                    ? this.altPoints
-                    : this.points ;
+            ? this.altPoints
+                : this.points ;
 
         } // end getPoints()
-
 
     /*
      * miscellaneous utilities
@@ -265,7 +263,6 @@ public enum Rank
 
         }   // setUseAltOrder()
 
-
     /*
      * utility methods
      */
@@ -315,6 +312,7 @@ public enum Rank
                                aRank.altPoints,
                                aRank.order,
                                aRank.altOrder ) ;
+
             }	// end for
 
         }	// end main()

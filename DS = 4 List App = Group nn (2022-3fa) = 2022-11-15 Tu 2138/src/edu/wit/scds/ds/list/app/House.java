@@ -4,8 +4,6 @@ package edu.wit.scds.ds.list.app ;
 import java.util.Scanner ;
 
 /**
- * 
- * 
  * @author Laura Wysocki
  *
  * @version 1.0.0 2022-12-01 Initial implementation
@@ -33,6 +31,7 @@ public class House extends GenericPlayer
             return true ; // are hitting
 
             }
+
         return false ; // not hitting
 
         } // end isHitting()
@@ -50,13 +49,13 @@ public class House extends GenericPlayer
             } // end if
 
         // will crash if cards is empty
-        this.cards.get( 0 ).setFaceUp(false) ;
+        this.cards.get( 0 ).setFaceUp( false ) ;
 
         } // end flipFirstCardDown()
-    
+
+
     /**
      * Flips first card so it's visible
-     * 
      */
     public void flipFirstCardUp()
         {
@@ -66,7 +65,7 @@ public class House extends GenericPlayer
 
             } // end if
 
-        this.cards.get( 0 ).setFaceUp(true) ;
+        this.cards.get( 0 ).setFaceUp( true ) ;
 
         } // flipFirstCardUp()
 

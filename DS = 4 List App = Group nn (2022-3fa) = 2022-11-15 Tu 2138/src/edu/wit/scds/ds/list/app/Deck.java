@@ -49,14 +49,15 @@ public class Deck extends Pile
         {
         super() ;
         populateDeck() ;
-        
-        } // end no-args constructor 
+
+        } // end no-args constructor
 
 
     /**
      * method to draw cards
-     * 
-     * @param h creates player's hand
+     *
+     * @param h
+     *     creates player's hand
      */
     public void draw( Hand h )
         {
@@ -65,6 +66,7 @@ public class Deck extends Pile
         this.cards.remove( r ) ;
 
         } // end draw()
+
 
     /**
      * shuffles deck

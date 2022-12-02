@@ -56,7 +56,8 @@ public class Pile
 
 
     /**
-     * @param pileSize desired size of the pile
+     * @param pileSize
+     *     desired size of the pile
      */
     public Pile( int pileSize )
         {
@@ -67,7 +68,7 @@ public class Pile
 
     /**
      * adds card to pile
-     * 
+     *
      * @param c
      *     card to be added
      */
@@ -80,7 +81,7 @@ public class Pile
 
     /**
      * removes card from pile
-     * 
+     *
      * @param c
      *     card to be removed
      */

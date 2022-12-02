@@ -22,14 +22,13 @@
  * @formatter:on
  */
 
-
 package edu.wit.scds.ds.list.app ;
 
 /**
  * An enumeration of card suits. (Listing C-2 of Appendix C.)
  * <p>
- * You may want/need to adjust the priorities for your game. As provided, suits are ordered by
- * priority:<br>
+ * You may want/need to adjust the priorities for your game. As provided, suits are
+ * ordered by priority:<br>
  *
  * <pre>
  * Spades (highest) -> Diamonds -> Hearts -> Clubs -> none (lowest)
@@ -76,9 +75,11 @@ public enum Suit
     ;
 // @formatter:on
 
-
     // static fields
-    /** when true, evaluations will use {@code altPriority} instead of {@code priority} */
+    /**
+     * when true, evaluations will use {@code altPriority} instead of
+     * {@code priority}
+     */
     private static boolean useAltPriority = false ;
 
     // data fields
@@ -92,7 +93,6 @@ public enum Suit
     private final int priority ;
     /** alternative priority ordering - may be more natural for display */
     private final int altPriority ;
-
 
     /**
      * @param suitDisplayName
@@ -157,8 +157,8 @@ public enum Suit
     public int getPriority()
         {
         return Suit.useAltPriority
-                    ? this.altPriority
-                    : this.priority ;
+            ? this.altPriority
+                : this.priority ;
 
         }   // end getPriority()
 
@@ -171,7 +171,6 @@ public enum Suit
         return this.altPriority ;
 
         }   // end getAltPriority()
-
 
     /*
      * miscellaneous utilities
@@ -207,7 +206,6 @@ public enum Suit
         return wasUseAltPriority ;
 
         }   // setUseAltPriority()
-
 
     /*
      * utility methods
@@ -256,6 +254,7 @@ public enum Suit
                                aSuit.color,
                                aSuit.getPriority(),
                                aSuit.getAltPriority() ) ;
+
             }	// end for
 
         }	// end main()
