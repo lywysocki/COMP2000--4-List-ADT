@@ -114,7 +114,7 @@ public class Hand extends Pile
         else
             {
             Hand split = new Hand() ;      ///
-            split.addCard( cards.remove( 1 ) ) ;
+            split.addCard( this.cards.remove( 1 ) ) ;
             value = this.cards.get( 0 ).getValue() ;
             boolean isSplit = true ;
             return split ;
