@@ -57,9 +57,9 @@ public abstract class GenericPlayer extends Hand
     @Override
     public String toString()
         {
-        String s ;
-        return String.format( "%s: %s", this.name, super.toString() ) ;
-
+        String s;
+        s = String.format("%s: %s", name, super.toString());
+        return s;
         }
 
 
