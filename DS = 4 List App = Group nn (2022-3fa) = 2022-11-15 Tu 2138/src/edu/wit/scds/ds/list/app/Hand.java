@@ -24,6 +24,8 @@
 
 package edu.wit.scds.ds.list.app ;
 
+import java.util.Scanner ;
+
 /**
  * Representation of a hand of cards
  *
@@ -52,6 +54,29 @@ public class Hand extends Pile
      */
     public int getHandValue()
         {
+
+        if ( ( this.cards.size() == 2 ) && isSplittable() )
+            {
+            Scanner input = new Scanner( System.in ) ;
+            System.out.printf( "%s: Do you want to split (y/n)? " ) ;
+            String response = input.next() ; // stops a white space
+            if ( response.length() == 0 )
+                {
+                if ( response.charAt( 0 ) == 'y' )
+                    {
+                    split() ;
+
+                    } // end if
+                else if ( ( response.charAt( 0 ) != 'n' ) )
+                    {
+                    System.out.printf( "Please respond with y or n.%n" ) ;
+
+                    } // end else if
+
+                } // end if
+
+            } // end else
+
         int value = 0 ;
 
         for ( Card element : this.cards )
@@ -145,7 +170,9 @@ public class Hand extends Pile
 
 
     /**
-     * @return
+     * Splits hand into two
+     *
+     * @return second hand
      */
     public Hand split()
         {
@@ -154,23 +181,23 @@ public class Hand extends Pile
             return null ;
 
             }
-        Hand split = new Hand() ;      ///
-        split.addCard( this.cards.remove( 1 ) ) ;
-        // value = this.cards.get( 0 ).getValue() ;
-        boolean isSplit = true ;
-        return split ;
+
+        Hand secondHand = new Hand() ;      ///
+        secondHand.addCard( this.cards.remove( 1 ) ) ;
+        return secondHand ;
 
         } // end split()
 
 
     /**
-     * @return
+     * tests if hand can be split
+     *
+     * @return true if player can split, false if otherwise
      */
     private boolean isSplittable()
         {
 
-        // TODO Auto-generated method stub
-        return false ;
+        return this.cards.get( 0 ).toString().equals( this.cards.get( 1 ).toString() ) == true ;
 
         } // end isSplittable()
 

@@ -24,6 +24,7 @@
 
 package edu.wit.scds.ds.list.app ;
 
+import java.util.Collections ;
 import java.util.Random ;
 
 /**
@@ -73,7 +74,7 @@ public class Deck extends Pile
      */
     public void shuffle()
         {
-        populateDeck() ;
+        Collections.shuffle( this.cards ) ;
 
         } // end shuffle()
 

@@ -23,10 +23,10 @@ public class Blackjack
     public static void main( String[] args )
         {
         Scanner input = new Scanner( System.in ) ;
-        Deck d = new Deck() ; // a lot happens here!
+        Deck d = new Deck() ;
 
         System.out.printf( "%nWelcome to Blackjack%n%n" ) ;
-        System.out.printf( "This game is to be played by 2 or more people" ) ;
+        System.out.printf( "This game is to be played by 2 or more people%n%n" ) ;
         System.out.printf( "Enter number of human players (if # is < 2 the number of players will default to 2): " ) ;
 
         int numPlayers = input.nextInt() ;
@@ -80,7 +80,7 @@ public class Blackjack
             } // end for
 
         /**
-         * main gameplay, are you hitting?
+         * main gameplay
          */
         for ( GenericPlayer p : players )
             {
