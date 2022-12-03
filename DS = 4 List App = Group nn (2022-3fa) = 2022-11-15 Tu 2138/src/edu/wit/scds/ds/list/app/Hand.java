@@ -55,28 +55,6 @@ public class Hand extends Pile
     public int getHandValue()
         {
 
-        if ( ( this.cards.size() == 2 ) && isSplittable() )
-            {
-            Scanner input = new Scanner( System.in ) ;
-            System.out.printf( "%s: Do you want to split (y/n)? " ) ;
-            String response = input.next() ; // stops a white space
-            if ( response.length() == 0 )
-                {
-                if ( response.charAt( 0 ) == 'y' )
-                    {
-                    split() ;
-
-                    } // end if
-                else if ( ( response.charAt( 0 ) != 'n' ) )
-                    {
-                    System.out.printf( "Please respond with y or n.%n" ) ;
-
-                    } // end else if
-
-                } // end if
-
-            } // end else
-
         int value = 0 ;
 
         for ( Card element : this.cards )
