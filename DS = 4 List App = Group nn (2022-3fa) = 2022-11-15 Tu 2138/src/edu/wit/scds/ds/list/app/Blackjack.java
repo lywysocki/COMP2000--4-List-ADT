@@ -26,9 +26,16 @@ public class Blackjack
         Deck d = new Deck() ; // a lot happens here!
 
         System.out.printf( "%nWelcome to Blackjack%n%n" ) ;
-        //System.out.printf( "Enter number of human players: " ) ;
-        int numPlayers = 2 ; // put in try catch later in case someone
-                                           // puts in something to crash program
+        System.out.printf( "This game is to be played by 2 or more people" ) ;
+        System.out.printf( "Enter number of human players (if # is < 2 the number of players will default to 2): " ) ;
+
+        int numPlayers = input.nextInt() ;
+
+        if ( numPlayers < 2 )
+            {
+            numPlayers = 2 ;
+
+            }
 
         /**
          * Create our structure for holding all the players
@@ -139,7 +146,6 @@ public class Blackjack
 
                     } // end if
 
-                
                 else if ( !player.isBusted() && ( player.getHouseValue() == h.getHouseValue() ) )
                     {
                     player.push() ;
