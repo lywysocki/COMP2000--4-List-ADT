@@ -41,6 +41,7 @@ public class Blackjack
          * Create our structure for holding all the players
          */
         ArrayList<GenericPlayer> players = new ArrayList<>( numPlayers ) ;
+        ArrayList<GenericPlayer> splitHands = new ArrayList<>( 0 ) ;
 
         /**
          * Create all the players
@@ -76,8 +77,25 @@ public class Blackjack
                 } // end if
 
             System.out.printf( "%s%n", p ) ;
+            
+            if (p.isSplittable() )
+                {
+                System.out.printf("%s: Do you want to split (y/n)? ", p );
+                
+                Scanner response = new Scanner( System.in ) ;
+                String split = response.next();
+                
+                if ( split.equals("y"))
+                    {
+                    splitHands.add( p.split() ) ;
+                    d.draw(p);
+                    System.out.printf( "%s%n", p ) ;
+                    }
+
+                }
 
             } // end for
+        
 
         /**
          * main gameplay

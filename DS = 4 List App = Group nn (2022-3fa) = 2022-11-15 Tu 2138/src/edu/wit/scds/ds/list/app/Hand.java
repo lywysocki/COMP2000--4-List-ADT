@@ -147,39 +147,6 @@ public class Hand extends Pile
         } // end getHouseValue()
 
 
-    /**
-     * Splits hand into two
-     *
-     * @return second hand
-     */
-    public Hand split()
-        {
-        if ( !isSplittable() )
-            {
-            return null ;
-
-            }
-
-        Hand secondHand = new Hand() ;      ///
-        secondHand.addCard( this.cards.remove( 1 ) ) ;
-        return secondHand ;
-
-        } // end split()
-
-
-    /**
-     * tests if hand can be split
-     *
-     * @return true if player can split, false if otherwise
-     */
-    private boolean isSplittable()
-        {
-
-        return this.cards.get( 0 ).toString().equals( this.cards.get( 1 ).toString() ) == true ;
-
-        } // end isSplittable()
-
-
     @Override
     public String toString()
         {

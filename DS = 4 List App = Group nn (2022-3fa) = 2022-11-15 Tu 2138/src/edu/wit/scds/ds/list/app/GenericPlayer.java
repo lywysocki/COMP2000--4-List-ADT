@@ -59,7 +59,34 @@ public abstract class GenericPlayer extends Hand
         System.out.printf( "%s: Busted!%n", this.name ) ;
 
         } // end busted()
+    
+    /**
+     * tests if hand can be split
+     *
+     * @return true if player can split, false if otherwise
+     */
+    public boolean isSplittable()
+        {
 
+        return this.cards.get( 0 ).rank.equals( this.cards.get( 1 ).rank ) ;
+
+        } // end isSplittable()
+    
+    /**
+     * Splits hand into two
+     *
+     * @return second hand
+     */
+    public Player split()
+        {
+        
+        Player handTwo = new Player( this.name + " second hand" );
+        this.name = (this.name + " first hand" );
+        handTwo.addCard( this.cards.remove( 1 ) ) ;
+        return handTwo ;
+
+        } // end split()
+    
 
     @Override
     public String toString()
