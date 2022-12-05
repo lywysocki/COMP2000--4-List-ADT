@@ -23,9 +23,14 @@ public class Blackjack
     public static void main( String[] args )
         {
         Scanner input = new Scanner( System.in ) ;
+<<<<<<< HEAD
         Deck d = new Deck() ;
+=======
+        Deck d = new Deck() ; 
+>>>>>>> branch 'main' of https://github.com/lywysocki/COMP2000--4-List-ADT.git
 
         System.out.printf( "%nWelcome to Blackjack%n%n" ) ;
+<<<<<<< HEAD
         System.out.printf( "This game is to be played by 2 or more people%n%n" ) ;
         System.out.printf( "Enter number of human players (if # is < 2 the number of players will default to 2): " ) ;
 
@@ -36,6 +41,10 @@ public class Blackjack
             numPlayers = 2 ;
 
             }
+=======
+        //System.out.printf( "Enter number of human players: " ) ;
+        int numPlayers = 2 ; 
+>>>>>>> branch 'main' of https://github.com/lywysocki/COMP2000--4-List-ADT.git
 
         /**
          * Create our structure for holding all the players
